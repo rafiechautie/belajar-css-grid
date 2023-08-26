@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      font-family: arial;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .container {
+      width: 600px;
+      margin: 50px auto;
+      border: 5px solid #333;
+      box-sizing: border-box;
+      padding: 5px;
+      display: grid;
+      grid-template-areas: "header header"
+        "aside main"
+        "nav main"
+        "footer footer";
+         /* kolom sebelah kiri ukurannya 1 dan sebelah kanan ukurannyan 1.5  */
+      grid-template-columns: 1fr 1.5fr;
+      /* kita punya 4 baris, bari pertama ukurannya 1, baris kedua ukurannya 1 juga, baris ke 3 ukurannya 1.3 dan baris keempat pakek ruang yg tersisa  */
+      grid-template-rows: 1fr 1fr 1.3fr;
+    }
+
+    header {
+       /* ambil area header */
+      grid-area: header;
+      background-color: #B063D8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    aside {
+      /* ambil area aside  */
+      grid-area: aside;
+      background-color: #2F93FF;
+      padding: 60px 0;
+    }
+
+    nav {
+      /* ambil area nav  */
+      grid-area: nav;
+      background-color: #E45765;
+      padding: 100px 0;
+    }
+
+    main {
+      /* ambil area main  */
+      grid-area: main;
+      background-color: #E0AA77;
+      box-sizing: border-box;
+      flex: 1.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer {
+       /* ambil area footer  */
+      grid-area: footer;
+      background-color: #666;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>Header</header>
+    <aside>Aside</aside>
+    <nav>Nav</nav>
+    <main>Main</main>
+    <footer>Footer</footer>
+  </div>
+</body>
+
+</html>
